@@ -21,6 +21,10 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void { this.carregarTarefas(); }
 
+  alternarTema(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
   carregarTarefas(): void {
     this.tarefaService.getTarefas().subscribe(data => {
       this.tarefas = data.map(t => ({ ...t, selecionada: false }));

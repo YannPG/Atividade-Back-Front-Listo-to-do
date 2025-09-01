@@ -2,6 +2,7 @@
   <div class="header">
     <h1>Minha Lista de Tarefas</h1>
     <div class="header-actions">
+      <button class="btn-refresh" (click)="alternarTema()">☀️/🌑</button>
       <button class="btn-refresh" (click)="carregarTarefas()">🔄 Atualizar</button>
       <button *ngIf="existemTarefasSelecionadas()" class="btn-delete" (click)="deletarTarefasSelecionadas()">
         ❌ Excluir Selecionadas

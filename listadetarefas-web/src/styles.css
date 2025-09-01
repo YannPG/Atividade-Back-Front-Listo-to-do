@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --cor-fundo-primaria: #ffffff;
+  --cor-fundo-secundaria: #f8f9fa;
+  --cor-texto-principal: #333;
+  --cor-linha-separadora: #eee;
+  --cor-borda-container: #ccc;
+  --cor-texto-tachado: #888;
+}
+
+body.dark-theme {
+  --cor-fundo-primaria: #121212;
+  --cor-fundo-secundaria: #222;
+  --cor-texto-principal: #e0e0e0;
+  --cor-linha-separadora: #333;
+  --cor-borda-container: #555;
+  --cor-texto-tachado: #888;
+}
+
+body {
+  background-color: var(--cor-fundo-primaria);
+  color: var(--cor-texto-principal);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.task-list-container {
+  border: 1px solid var(--cor-borda-container);
+}
+.task-list-header {
+  background-color: var(--cor-fundo-secundaria);
+  border-bottom: 2px solid var(--cor-borda-container);
+  color: var(--cor-texto-principal);
+}
+.task-row {
+  border-bottom: 1px solid var(--cor-linha-separadora);
+}
+.form-add input, .col-desc input {
+  background-color: var(--cor-fundo-primaria);
+  border: 1px solid var(--cor-borda-container);
+  color: var(--cor-texto-principal);
+}
+.completed {
+  color: var(--cor-texto-tachado);
+}
